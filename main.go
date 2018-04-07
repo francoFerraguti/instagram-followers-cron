@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	//ConnectToDatabase()
+	ConnectToDatabase()
 
 	ConfigureRouter()
 	CreateRouter()
