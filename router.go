@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
@@ -41,6 +43,6 @@ func RunRouter() {
 	router.Run(":" + herokuPort)
 }
 
-func Pong(c *gin.Context) {
+func TestPingPong(c *gin.Context) {
 	c.JSON(200, "pong")
 }
