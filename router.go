@@ -28,7 +28,7 @@ func CreateRouter() {
 
 	public := router.Group("/")
 	{
-		public.POST("/ping", TestPingPong)
+		public.GET("/ping", TestPingPong)
 	}
 
 }
