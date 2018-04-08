@@ -16,7 +16,7 @@ type UserStruct struct {
 }
 
 func GetMockUser() UserStruct {
-	return new UserStruct {
+	return UserStruct {
 		ID: 0,
 		Username: "test",
 		FullName: "Test Name",
