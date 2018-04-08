@@ -23,7 +23,7 @@ func GetMockUser() UserStruct {
 		InstagramID:  19832193,
 		IsFollower:   false,
 		ImFollowing:  false,
-		FollowDate:   nil,
-		UnfollowDate: nil,
+		FollowDate:   time.Time{},
+		UnfollowDate: time.Time{},
 	}
 }
