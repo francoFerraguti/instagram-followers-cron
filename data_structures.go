@@ -16,14 +16,14 @@ type UserStruct struct {
 }
 
 func GetMockUser() UserStruct {
-	return UserStruct {
-		ID: 0,
-		Username: "test",
-		FullName: "Test Name",
-		InstagramID: 19832193
-		IsFollower: false,
-		ImFollowing: false,
-		FollowDate: nil,
+	return UserStruct{
+		ID:           0,
+		Username:     "test",
+		FullName:     "Test Name",
+		InstagramID:  19832193,
+		IsFollower:   false,
+		ImFollowing:  false,
+		FollowDate:   nil,
 		UnfollowDate: nil,
 	}
 }
