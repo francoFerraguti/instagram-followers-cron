@@ -27,7 +27,7 @@ func GetDatabase() *sql.DB {
 
 func createSchema() {
 	createUserTable()
-	mockUsers()
+	mockUser(GetMockUser())
 }
 
 func createUserTable() {
@@ -47,6 +47,29 @@ func createUserTable() {
 	frango.PrintErr(err)
 }
 
-func mockUsers() {
+func mockUser(user UserStruct) {
+	query := `
+		INSERT INTO USERS (
+			ID,
+			Username,
+			FullName,
+			InstagramID,
+			IsFollower,
+			ImFollowing,
+			FollowDate,
+			UnfollowDate
+		) VALUES (
+			?,
+			?,
+			?,
+			?,
+			?,
+			?,
+			?,
+			?
+		);
+	`
 
+	_, err := db.Exec(query, user.ID, user.Username, user.FullName, user.InstagramID, user.IsFollower, user.ImFollowing, user.FollowDate, user.UnfollowDate)
+	frango.PrintErr(err)
 }
